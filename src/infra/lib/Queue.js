@@ -1,4 +1,4 @@
-import redisConfig from "../config/redis";
+import redis from "../config/redis";
 import RegistrationMail from '../jobs/RegistrationMail'
 import Bull from "bull";
 import AccountLogs from "../jobs/AccountLogs";
@@ -15,7 +15,7 @@ export default class Queue {
    init(){
       jobs.forEach(({key, handle}) => {
          this.queues[key] = {
-            bull: new Bull(key, redisConfig),
+            bull: new Bull(key, {redis}),
             name: key,
             handle,
           };
