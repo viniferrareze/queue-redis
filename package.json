@@ -8,7 +8,7 @@
     "dev:server": "nodemon src/infra/server.js",
     "dev:queue": "nodemon  src/infra/queue.js",
     "build": "sucrase ./src -d ./dist --transforms imports",
-    "start": "concurrently \"node dist/infra/queue.js\"  \"node dist/infra/server.js\" "
+    "start": "concurrently \"node dist/infra/server.js\" \"node dist/infra/queue.js\""
   },
   "dependencies": {
     "bull": "^3.20.1",
