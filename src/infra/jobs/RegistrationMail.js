@@ -14,8 +14,6 @@
     // });
 
     console.log('JOB Registration...');
-    console.log(account);
-    console.log('');
   }
 };
 
